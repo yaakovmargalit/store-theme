@@ -11992,7 +11992,14 @@ header {
   width: 100%;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.099);
+}
+header .header-icons svg {
+  margin-left: 30px;
+  cursor: pointer;
 }
 header .logo img {
   width: 150px;
@@ -12008,6 +12015,23 @@ header .logo img {
   transition: all 0.5s;
 }
 
+@keyframes blink {
+  0% {
+    background-color: #5c5a5a;
+  }
+  49% {
+    background-color: #5c5a5a;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #5c5a5a;
+  }
+}
 .home-hero .swiper {
   width: 100%;
   height: 70vh;
@@ -12044,31 +12068,39 @@ header .logo img {
   }
 }
 
+hr {
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 0;
+  width: 60%;
+  border-top: 2px solid rgba(0, 0, 0, 0.4);
+}
+
 .main {
   padding-top: 50px;
 }
 .main .catagory-list {
   width: 80%;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 20px;
-  justify-content: flex-start;
-  align-items: flex-start;
+  grid-template-columns: repeat(3, 1fr);
 }
 @media (max-width: 768px) {
   .main .catagory-list {
     width: 90%;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .main .catagory-list .catagory {
-  max-width: 100%;
-  height: 180px;
+  width: 100%;
+  flex: 1;
   display: grid;
   cursor: pointer;
 }
 .main .catagory-list .catagory img {
-  height: 180px;
+  height: 100%;
   width: 100%;
   grid-row: 1;
   grid-column: 1;
@@ -12090,6 +12122,52 @@ header .logo img {
 }
 .main .catagory-list .catagory .catagory-title:hover {
   background-color: rgb(78, 77, 77);
+}
+.main .search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.main .search-box .search-title {
+  margin-bottom: 20px;
+}
+.main .search-box .search-demo-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.main .search-box .search-demo-form .demo-input {
+  height: 40px;
+  width: 60%;
+  margin-right: 8px;
+  box-shadow: 0px 0px 13px 4px rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main .search-box .search-demo-form .demo-input p {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+.main .search-box .search-demo-form .demo-input p .typed-text {
+  color: #5c5a5a;
+}
+.main .search-box .search-demo-form .demo-input p span.cursor {
+  display: inline-block;
+  background-color: #5c5a5a;
+  margin-left: 0.1rem;
+  width: 1.5px;
+  animation: blink 1s infinite;
+}
+.main .search-box .search-demo-form .demo-input p span.cursor.typing {
+  animation: none;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

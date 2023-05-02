@@ -1,87 +1,165 @@
-.home-hero {
-    .swiper {
-        width: 100%;
-        height: 70vh;
-        .swiper-slide {
-            img {
-                width: 100%;
-                max-width: 100%;
-                max-height: 100%;
-            }
-        }
-        .slide-1{
-            background-image: url(https://res.cloudinary.com/duohe6hiw/image/upload/v1683014111/Designer_lvrqi6.png);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        .slide-2{
-            background-image: url(https://res.cloudinary.com/duohe6hiw/image/upload/v1683030157/store/Designer_2_q66ltg.png);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        .slide-3{
-            background-image: url(https://res.cloudinary.com/duohe6hiw/image/upload/v1683030151/store/Designer_1_t9hhts.png);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-    }
+@keyframes blink {
+  0% {
+    background-color: #5c5a5a;
+  }
+  49% {
+    background-color: #5c5a5a;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #5c5a5a;
+  }
+}
 
-    @media (max-width: 768px) {
-       .swiper{
-        height: 400px;
-        .swiper-slide{
-            img{
-                height: 400px;
-            }
-        }
-       }
+.home-hero {
+  .swiper {
+    width: 100%;
+    height: 70vh;
+    .swiper-slide {
+      img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
+    .slide-1 {
+      background-image: url(https://res.cloudinary.com/duohe6hiw/image/upload/v1683014111/Designer_lvrqi6.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .slide-2 {
+      background-image: url(https://res.cloudinary.com/duohe6hiw/image/upload/v1683030157/store/Designer_2_q66ltg.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .slide-3 {
+      background-image: url(https://res.cloudinary.com/duohe6hiw/image/upload/v1683030151/store/Designer_1_t9hhts.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .swiper {
+      height: 400px;
+      .swiper-slide {
+        img {
+          height: 400px;
+        }
+      }
+    }
+  }
+}
+hr{
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 0;
+    width: 60%;
+  border-top: 2px solid rgba(0, 0, 0, 0.4);
 }
 .main {
-    padding-top: 50px;
-    .catagory-list {
-        width: 80%;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: flex-start;
-        align-items: flex-start;
-        @media (max-width: 768px) {
-            width: 90%;
-        }
-        .catagory {
-            max-width: 100%;
-            height: 180px;
-            display: grid;
-            cursor: pointer;
-            img {
-                height: 180px;
-                width: 100%;
-                grid-row: 1;
-                grid-column: 1;
-            }
-            .catagory-title {
-                grid-row: 1;
-                grid-column: 1;
-                align-self: flex-end;
-                max-height: 70px;
-                min-height: 70px;
-                overflow: hidden;
-                background-color: rgba(189, 189, 189, 0.787);
-                color: white;
-                font-size: 14px;
-                padding: 7px;
-                z-index: 2;
-                text-align: center;
-                font-size: 30px;
-                &:hover {
-                    background-color: rgb(78, 77, 77);
-                }
-            }
-        }
+  padding-top: 50px;
+  .catagory-list {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 768px) {
+      width: 90%;
+      grid-template-columns: repeat(1, 1fr);
     }
+    .catagory {
+      width: 100%;
+      flex: 1;
+      // height: 180px;
+      display: grid;
+      cursor: pointer;
+      img {
+        height: 100%;
+        width: 100%;
+        grid-row: 1;
+        grid-column: 1;
+      }
+      .catagory-title {
+        grid-row: 1;
+        grid-column: 1;
+        align-self: flex-end;
+        max-height: 70px;
+        min-height: 70px;
+        overflow: hidden;
+        background-color: rgba(189, 189, 189, 0.787);
+        color: white;
+        font-size: 14px;
+        padding: 7px;
+        z-index: 2;
+        text-align: center;
+        font-size: 30px;
+        &:hover {
+          background-color: rgb(78, 77, 77);
+        }
+      }
+    }
+  }
+
+  .search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    .search-title{
+        margin-bottom: 20px;
+      }
+    .search-demo-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    
+      .demo-input {
+        height: 40px;
+        width: 60%;
+        // border: 1px solid black;
+        // border-radius: 5px;
+        margin-right: 8px;
+        -webkit-box-shadow: 0px 0px 13px 4px rgba(0, 0, 0, 0.14);
+        box-shadow: 0px 0px 13px 4px rgba(0, 0, 0, 0.14);
+        border-radius: 6px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        p {
+          height: fit-content;
+          margin-top: 0;
+          margin-bottom: 0;
+          margin-right: 20px;
+          .typed-text{
+            color: #5c5a5a;
+          }
+        }
+        p span.cursor {
+          display: inline-block;
+          background-color: #5c5a5a;
+          margin-left: 0.1rem;
+          width: 1.5px;
+          animation: blink 1s infinite;
+        }
+
+        p span.cursor.typing {
+          animation: none;
+        }
+      }
+    }
+  }
 }
