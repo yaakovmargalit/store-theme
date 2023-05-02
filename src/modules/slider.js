@@ -7,7 +7,6 @@ import 'swiper/css/pagination';
 
 export default class Slider {
     constructor() {
-        console.log("slider");
 
         const swiper = new Swiper('.swiper', {
             // configure Swiper to use modules
@@ -33,7 +32,5 @@ export default class Slider {
                 el: '.swiper-scrollbar',
             },
         });
-
-        console.log(swiper);
     }
 }
