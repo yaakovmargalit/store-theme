@@ -25,9 +25,9 @@ export default class General {
         const cursorSpan = document.querySelector(".cursor");
 
         const textArray = [
-            'איפור לשבת',
-            'בושם אכותי',
-            'אודם עמיד'
+            'איפור מהודר לשבת',
+            'בושם אכותי מושלם',
+            'אודם עמיד לארועים'
         ]
         const typingDelay = 100;
         const erasingDelay = 100;
