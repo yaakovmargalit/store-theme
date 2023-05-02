@@ -11,12 +11,51 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/style.scss */ "./styles/style.scss");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ "./src/modules/slider.js");
+/* harmony import */ var _modules_general__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/general */ "./src/modules/general.js");
 
 // import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
 
+
 var slid = new _modules_slider__WEBPACK_IMPORTED_MODULE_1__["default"]();
+var general = new _modules_general__WEBPACK_IMPORTED_MODULE_2__["default"]();
 console.log("run");
+
+/***/ }),
+
+/***/ "./src/modules/general.js":
+/*!********************************!*\
+  !*** ./src/modules/general.js ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ General; }
+/* harmony export */ });
+class General {
+  constructor() {
+    let scrollpos = window.scrollY;
+    const scrollChange = 50;
+
+    //The function that will add the class
+    const add_class_on_scroll = () => header.classList.add("header-bg-on-scroll");
+    const remove_class_on_scroll = () => header.classList.remove("header-bg-on-scroll");
+
+    //Tracking a "scroll" event
+    window.addEventListener('scroll', function () {
+      scrollpos = window.scrollY;
+
+      //If we scrolled more than we specified in the scrollChange variable, the add class function is executed
+      if (scrollpos >= scrollChange) {
+        add_class_on_scroll();
+      } else {
+        remove_class_on_scroll();
+      }
+    });
+    const header = document.querySelector("header");
+  }
+}
 
 /***/ }),
 

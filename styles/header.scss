@@ -1,8 +1,25 @@
 header{
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     width: 100%;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.099);
+    .logo{
+        img{
+            width: 150px;
+        }
+        
+    @media (max-width: 768px) {
+        img{
+            width: 100px;
+        }
+    }
+    }
+
+}
+
+.header-bg-on-scroll{
+    background-color: rgb(255, 255, 255);
+    transition: all .5s;
 }

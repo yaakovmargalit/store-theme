@@ -1,5 +1,5 @@
 // import Swiper JS
-import Swiper, { Navigation, Pagination,Autoplay } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 // import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,12 +10,12 @@ export default class Slider {
 
         const swiper = new Swiper('.swiper', {
             // configure Swiper to use modules
-            modules: [Navigation, Pagination,Autoplay],
+            modules: [Navigation, Pagination, Autoplay],
             // Optional parameters
             direction: 'horizontal',
             loop: true,
             spaceBetween: 0,
-            speed:2000,
+            speed: 2000,
             autoplay: {
                 delay: 2000,
                 disableOnInteraction: true
