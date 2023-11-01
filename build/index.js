@@ -59,7 +59,7 @@ class General {
 
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
-    const textArray = ['איפור מהודר לשבת', 'בושם אכותי מושלם', 'אודם עמיד לארועים'];
+    const textArray = ['תמונה של BTS', 'כובע שמש מדהים', 'חולצה של blackpink'];
     const typingDelay = 100;
     const erasingDelay = 100;
     const newTextDelay = 1000; // Delay between current and next text
